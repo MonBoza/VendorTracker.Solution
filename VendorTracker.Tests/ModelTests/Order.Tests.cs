@@ -6,8 +6,12 @@ using System;
 namespace VendorTracker.Tests
 {
   [TestClass]
-  public class OrderTests
+  public class OrderTests : IDisposable
   {
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
 
 
 
@@ -92,6 +96,24 @@ namespace VendorTracker.Tests
       newOrder.Date = updatedDate;
       string result = newOrder.Date;
       Assert.AreEqual(updatedDate, result);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newList = new List<Order> { };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrderList()
+    {
+      string title01 = "bread";
+      string title02 = "pastry";
+      Order newOrder1 = new Order(title01, "12 orders of bread", 5, "1/26/2024");
+      Order newOrder2 = new Order(title02, "12 orders of pastry", 5, "1/26/2024");
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
