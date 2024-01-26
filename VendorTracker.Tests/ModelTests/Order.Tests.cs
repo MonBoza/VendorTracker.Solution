@@ -12,9 +12,16 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order();
+      Order newOrder = new Order("Test Title");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
+    [TestMethod]
+    public void GetTitle_ReturnsTitleValue_String()
+    {
+      string title = "bread";
+      Order newOrder = new Order(title);
+      string result = newOrder.Title;
+      Assert.AreEqual(title, result);
     }
   }
 }
-
