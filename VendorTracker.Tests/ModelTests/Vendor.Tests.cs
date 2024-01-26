@@ -6,14 +6,20 @@ using System.Collections.Generic;
 namespace VendorTracker.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
+    
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
       Vendor newVendor = new Vendor("Test Vendor", "Test Description");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
+    
     [TestMethod]
     public void GetName_ReturnsName_String()
     {
@@ -22,6 +28,7 @@ namespace VendorTracker.Tests
       string result = newVendor.Name;
       Assert.AreEqual(name, result);
     }
+    
     [TestMethod]
     public void SetName_SetsVendorName_Void()
     {
@@ -32,6 +39,7 @@ namespace VendorTracker.Tests
       string result = newVendor.Name;
       Assert.AreEqual(updatedName, result);
     }
+    
     [TestMethod]
     public void GetVendorDescription_ReturnsVendorDescriptionValue_String()
     {
@@ -40,6 +48,7 @@ namespace VendorTracker.Tests
       string result = newVendor.Description;
       Assert.AreEqual(description, result);
     }
+    
     [TestMethod]
     public void SetVendorDescription_SetsVendorDescription_Void()
     {
@@ -50,6 +59,15 @@ namespace VendorTracker.Tests
       string result = newVendor.Description;
       Assert.AreEqual(updatedDescription, result);
     }
-  
+    
+    [TestMethod]
+    public void GetVendorID_ReturnsVendorID_Int()
+    {
+      string name = "Test Vendor";
+      string description = "Test Description";
+      Vendor newVendor = new Vendor(name, description);
+      int result = newVendor.Id;
+      Assert.AreEqual(1, result);
+    }
   }
 }
