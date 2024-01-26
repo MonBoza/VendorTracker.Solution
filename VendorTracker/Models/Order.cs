@@ -6,12 +6,15 @@ namespace VendorTracker.Models
   public class Order
   {
     public string Title { get; set;}
-    public string Description { get;}
+    public string Description { get; }
+    public int Price { get; }
 
-    public Order(string title, string description)
+    public Order(string title, string description, int price)
     {
-      Description = description;
       Title = title;
+      Description = description;
+      Price = price;
     }
+    
   }
 }
