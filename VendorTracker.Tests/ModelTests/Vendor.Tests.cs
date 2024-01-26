@@ -40,6 +40,16 @@ namespace VendorTracker.Tests
       string result = newVendor.Description;
       Assert.AreEqual(description, result);
     }
+    [TestMethod]
+    public void SetVendorDescription_SetsVendorDescription_Void()
+    {
+      string description = "Orders every tuesday";
+      Vendor newVendor = new Vendor("bread", description);
+      string updatedDescription = "Orders every wednesday";
+      newVendor.Description = updatedDescription;
+      string result = newVendor.Description;
+      Assert.AreEqual(updatedDescription, result);
+    }
   
   }
 }
