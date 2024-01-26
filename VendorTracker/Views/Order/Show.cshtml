@@ -1,4 +1,23 @@
+@using VendorTracker.Models;
+
 @{
   Layout = "_Layout";
 }
 
+<h1>Vendor Tracker order Details: </h1>
+<h1>Vendor: @Model["vendor"].Name</h1>
+@if(Model["orders"].Count == 0)
+{
+  <p>There are no orders yet.</p>
+}
+
+<h2>Orders:</h2>
+@foreach (Order order in Model["vendor"])
+{
+    <p>@order.Title</p>
+    <p>@order.Description</p>
+    <p>@order.Price</p>
+    <p>@order.Date</p>
+  }
+<a href='/vendors/@Model["vendor"].Id/order/new'>Add another item</a>
+<a href='/vendors'>View all vendors</a>
