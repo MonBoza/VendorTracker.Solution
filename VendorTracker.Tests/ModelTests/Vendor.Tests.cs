@@ -23,6 +23,16 @@ namespace VendorTracker.Tests
       Assert.AreEqual(name, result);
     }
     [TestMethod]
+    public void SetName_SetsVendorName_Void()
+    {
+      string name = "Test Vendor";
+      Vendor newVendor = new Vendor(name, "Test Description");
+      string updatedName = "Updated Vendor";
+      newVendor.Name = updatedName;
+      string result = newVendor.Name;
+      Assert.AreEqual(updatedName, result);
+    }
+    [TestMethod]
     public void GetVendorDescription_ReturnsVendorDescriptionValue_String()
     {
       string description = "Orders every tuesday";
@@ -30,5 +40,6 @@ namespace VendorTracker.Tests
       string result = newVendor.Description;
       Assert.AreEqual(description, result);
     }
+  
   }
 }

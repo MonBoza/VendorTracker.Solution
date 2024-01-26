@@ -3,7 +3,7 @@ namespace VendorTracker.Models
 {
   public class Vendor
   {
-    public string Name {get;}
+    public string Name {get; set;}
     public string Description {get;}
   
     public Vendor(string name, string description)
