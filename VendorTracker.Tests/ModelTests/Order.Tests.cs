@@ -63,5 +63,15 @@ namespace VendorTracker.Tests
       string result = newOrder.Title;
       Assert.AreEqual(updatedTitle, result);
     }
+    [TestMethod]
+    public void SetDescription_SetsDescriptionValue_Void()
+    {
+      string description = "12 orders of bread";
+      Order newOrder = new Order("bread", description, 15, "1/26/2024");
+      string updatedDescription = "12 orders of pastry";
+      newOrder.Description = updatedDescription;
+      string result = newOrder.Description;
+      Assert.AreEqual(updatedDescription, result);
+    }
   }
 }
