@@ -1,6 +1,6 @@
 # Pierre's Vendor Tracker
 
-## This web application is for tracking Pierre's Vendors and Orders.
+## A web application for tracking Pierre's Vendors and Orders
 
 ### By Monica Barboza
 
@@ -12,7 +12,8 @@
 * Bootstrap
 
 ## Description
-Pierre's Vendor Tracker allows the user to Add  new Vendor to the List of Vendors. You can see a list of all the vendors 
+
+Pierre's Vendor Tracker lets users add vendors, view vendor details with unique descriptions, explore order histories, and look into detailed order information with a simple click. It offers a streamlined experience for managing vendors and orders.
 
 ## Setup/Installation Requirements
 
@@ -20,11 +21,11 @@ Pierre's Vendor Tracker allows the user to Add  new Vendor to the List of Vendor
 * Clone the repository by running the following command to your desktop:
 
 ```bash
-git clone https://github.com/MonBoza/project.git
+git clone https://github.com/MonBoza/VendorTracker.Solution.git
 ```
 
 * Make sure .gitignore is added to the repository.
-* Run
+* Navigate to the VendorTracker directory and build the project run
 
 ```bash
 dotnet build
@@ -32,25 +33,24 @@ dotnet build
 
  in your terminal.
 
-* Run tests by navigating to the test directory and running
+* Run tests by navigating to the test directory and executing:
 
 ```bash
 dotnet restore
 ```
 
-and then run
+followed by:
 
 ```bash
 dotnet test
 ```
 
-* Tests are located in the Project.Test directory.
-* Open the project in your favorite code editor.
+* Tests are located in the VendorTracker.Test directory in the ModelsTests Folder.
+* Open the project in your favorite code editor. 
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* When refreshing the form page, it continuously adds more items to the list. This issue will be addressed in future updates.
 
 ## License
 
@@ -62,6 +62,6 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Email: (mailto:<MonBoza@gmail.com>)
+Email: [MonBoza@gmail.com](mailto:MonBoza@gmail.com)
 
-Copyright (c) Month day, 2024 Monica Barboza
+Copyright (c) January 26, 2024 Monica Barboza
