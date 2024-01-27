@@ -12,17 +12,23 @@
 {
   <p>There are no orders for this vendor yet.</p>
 }
+else
+{
+  <h4>There are <strong>@Model["orders"].Count</strong> orders for this vendor.</h4>
+
 <p>Click each order for description of the order.</p>
 
   @foreach (Order order in @Model["orders"])
   {
    
-      <h4><a href='/vendors/@Model["vendor"]/orders/@order.Id'>@order.Title</a></h4>   
+      <h4><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></h4>;
+  }
   }
 
 
-</form>
+
 <br />
-<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new Order</a></p>
-<p><a href='/vendors'>Return to Vendor list</a></p>
-<p><a href='/'>Return to Main Page</a></p>
+<a href='/vendors/@Model["vendor"].Id/orders/new'><button >Add a new Order</button></a>
+<a href='/vendors'><Button>Return to Vendor list</Button></a>
+<br />
+<a href='/'><button>Return to Home</button></a>

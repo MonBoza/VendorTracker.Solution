@@ -1,6 +1,6 @@
-# (Application Name)
+# Pierre's Vendor Tracker
 
-## (Brief Description of Application)
+## This web application is for tracking Pierre's Vendors and Orders.
 
 ### By Monica Barboza
 
@@ -12,6 +12,7 @@
 * Bootstrap
 
 ## Description
+Pierre's Vendor Tracker allows the user to Add  new Vendor to the List of Vendors. You can see a list of all the vendors 
 
 ## Setup/Installation Requirements
 
