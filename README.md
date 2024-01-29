@@ -46,7 +46,7 @@ dotnet test
 ```
 
 * Tests are located in the VendorTracker.Test directory in the ModelsTests Folder.
-* Open the project in your favorite code editor. 
+* Open the project in your favorite code editor.
 
 ## Known Bugs
 

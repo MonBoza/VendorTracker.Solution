@@ -4,22 +4,26 @@
 
 @using VendorTracker.Models;
 
-<h3>Add a Vendor here</h3>
-
-<div class="card">
-  <div class="card-body">
+ <h3>Add a Vendor here</h3>
     <form action="/vendors" method="post">
-      <div class="form-group">
-        <label for="vendorName">Vendor name:</label>
-        <input id="vendorName" name="vendorName" type="text" class="form-control">
-      </div>
-      <br />
-      <div class="form-group">
-        <label for="vendorDescription">Description: </label> 
-        <input id="vendorDescription" name="vendorDescription" type="text" class="form-control">
-      </div>
-      <button type="submit" class="btn btn-primary">Add</button>
-    </form>
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="vendorName">Vendor name:</label>
+                    <input id="vendorName" name="vendorName" type="text" class="form-control">
+                </div>
 
-<p><a href="/">Back home</a></p>
-<p><a href="/vendors">Back to vendors.</a></p>
+                <div class="form-group">
+                    <label for="vendorDescription">Description:</label>
+                    <input id="vendorDescription" name="vendorDescription" type="text" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+    </form>
+  </div>
+  <br/>
+
+<a href="/"><button>Back home</button></a>
+<a href="/vendors"><button>Back to vendors.</button></a>
